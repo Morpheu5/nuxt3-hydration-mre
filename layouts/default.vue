@@ -1,10 +1,9 @@
 <template>
     <div>
-        <h1>{{ page_title }}</h1>
+        <TopBanner>
+            <template #bigtitle><slot name="bigtitle" /></template>
+            <template #smalltitle><slot name="smalltitle" /></template>
+        </TopBanner>
         <slot />
     </div>
 </template>
-
-<script setup>
-    const page_title = useState('page_title');
-</script>
